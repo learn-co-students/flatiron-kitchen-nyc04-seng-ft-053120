@@ -1,0 +1,14 @@
+<%= form_for ingredient do |f| %>
+
+    <% if ingredient.errors.any? %>
+        <% ingredient.errors.full_messages.each do |message| %>
+            <p><%= message %></p>
+        <% end %>
+    <% end %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.submit %>
+
+<% end %>
